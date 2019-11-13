@@ -1,0 +1,24 @@
+{
+  "name": "eip780optimized-site",
+  "version": "1.0.0",
+  "description": "A simple website to showcase the optimization of eip-780",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinliao/eip780optimized-site.git"
+  },
+  "keywords": [],
+  "author": "Vincent Liao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinliao/eip780optimized-site/issues"
+  },
+  "homepage": "https://github.com/vinliao/eip780optimized-site#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
