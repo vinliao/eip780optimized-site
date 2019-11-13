@@ -42,7 +42,7 @@ html {
     margin-top: 2rem; }
   .input-form__label {
     font-size: 1.75rem;
-    color: gray; }
+    color: grey; }
   .input-form__text-input {
     margin-top: 0.5rem;
     width: 100%;
@@ -57,7 +57,6 @@ html {
     width: 100%;
     font-size: 2rem;
     padding: 1rem 0;
-    transition: 0.3s;
     background: #262626;
     color: white;
     text-decoration: none;
@@ -73,18 +72,6 @@ html {
 .flex {
   display: flex;
   flex-wrap: wrap; }
-
-.input-form__submit,
-.result__back-button {
-  margin-top: 3rem;
-  width: 100%;
-  font-size: 2rem;
-  padding: 1rem 0;
-  transition: 0.3s;
-  background: #262626;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px; }
 
 .result {
   height: 100vh;
@@ -104,7 +91,7 @@ html {
     justify-content: space-between; }
   .result__optimize-before, .result__optimize-after, .result__gas-used-left, .result__gas-used-right {
     font-size: 1.75rem;
-    color: gray; }
+    color: grey; }
   .result__optimize-number-left, .result__optimize-number-right {
     font-size: 5rem;
     font-weight: 700;
@@ -112,6 +99,13 @@ html {
   .result__optimize-after, .result__optimize-number-right, .result__gas-used-right {
     text-align: right; }
   .result__back-button {
+    margin-top: 3rem;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 0;
+    background: #262626;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
     margin-top: 5rem;
     color: #262626;
