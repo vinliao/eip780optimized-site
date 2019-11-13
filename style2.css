@@ -39,7 +39,7 @@ html {
 }
 
 .input-form__form {
-  border: 1px hsl(0, 0%, 15%) solid;
+  border: 1px hsl(0, 0%, 80%) solid;
   padding: 0 2rem 2rem 2rem;
   margin-top: 2rem;
   border-radius: 5px;
