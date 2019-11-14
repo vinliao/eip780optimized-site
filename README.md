@@ -1,3 +1,6 @@
+## Notes to Jonas
+After `npm i`, run `./node_modules/.bin/webpack index.js --mode=development --watch` to enable webpack and leave it running. The index.js file won't update if you don't run this.
+
 ## Notes to self
 ### Images details
 1. First iteration is my attempt to design a form without prior design knowledge (it's super shitty)
