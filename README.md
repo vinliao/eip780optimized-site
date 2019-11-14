@@ -42,3 +42,10 @@ This means I can do
 `<script src="./dist/mainjs"></script>` in my html file, which will have the console log that I written, and the moment variable. In summary, what webpack does is it "combines" packages and make it browser compatible, and this is the reason why front end development uses npm and node. At the end of the day, those requires when developing front end will be turned by webpack into browser compatible code.
 
 Super cool!
+
+### On babel
+Now, after knowing what webpack does, how does babel fits in all these things? Babel just essentially transform (they use the term "transpile") es6 code into es5. It just basically turns `import` into `require`. After all the imports have been transpiled into require, then webpack will combine all the requires and spit out a single `/dist/main.js` file that we can import in our html file.
+
+With npm, we can easily download and manage packages. With webpack, we can use the downloaded node packages, which are server-side packages and turn it into a browser compatible code. With babel, we can use advanced es6 features **(HELLO OBJECT DESCTRUCTURING :D)** without worrying about browser compatibility.
+
+God dammit, now I understand how babel and webpack plays in front end development. It's such a cool thing!

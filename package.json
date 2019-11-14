@@ -19,9 +19,8 @@
   },
   "homepage": "https://github.com/vinliao/eip780optimized-site#readme",
   "dependencies": {
-    "decamelize": "^3.2.0",
-    "moment": "^2.24.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "web3": "^1.2.2"
   },
   "devDependencies": {
     "webpack": "^4.41.2",
