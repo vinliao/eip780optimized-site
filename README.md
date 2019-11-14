@@ -15,3 +15,17 @@ There's also other elements that is important but not as important as the domina
 The rest of the element that's not mentioned above is tertiary, it has the least importance out of all elements. This includes the form label, the number description and the back button at result page. I decrease the contrast of these elements so that the user won't pay much attention to it (it's not really important after all). I did that by fading out the text, and in the case of button, not using thick colors as background (only border).
 
 By having these hierarchy of importance makes the site easier to understand. This is because I force their eyes to pay attention to things that's worth paying attention to. No or wrong visual hierarchy confuses the eyes, imagine the text "gas used" is a red color with 50px font size and 900 font weight, it confuses the eyes because it's not important. People's eyes will be confused when their attention is directed to things that are not important.
+
+### Npm and webpack
+One of the coolest challenge that I face as of this writing is to find out how to "import" web3 package into vanillajs. At the core of everything, to import something to a javascript file, I need to import the js file on the html, which will be available to javascript. Let's take the package `moment` for example.
+
+If I want to use moment in vanilla js, I would just download moment, place it in my local folder and import that in my index.html file. A code example might be this:
+`<script src="./moment.js"></script>`
+
+Luckily, I don't need to manually search for the package moment, I can download it easily with the help of npm. After `npm install moment`, I can just do this on my html file.
+`<script src="./node_modules/moment/moment.js"></script>`
+
+Doing so will allow me to use moment in my js file. But problem will arise if we have multiple js file we want to import. Imagine wanting to import 10 packages, it will be a bloody mess. Here's where webpack comes to play. It will take the package that we want to use, then "combine" it to a single `/dist/main.js` file. So in our html file, we only need to do this to import all of our 10 package.
+`<script src="./dist/main.js"></script>`
+
+After that we can use all the 10 packages normally in our js.
