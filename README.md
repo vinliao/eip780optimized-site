@@ -25,7 +25,20 @@ If I want to use moment in vanilla js, I would just download moment, place it in
 Luckily, I don't need to manually search for the package moment, I can download it easily with the help of npm. After `npm install moment`, I can just do this on my html file.
 `<script src="./node_modules/moment/moment.js"></script>`
 
-Doing so will allow me to use moment in my js file. But problem will arise if we have multiple js file we want to import. Imagine wanting to import 10 packages, it will be a bloody mess. Here's where webpack comes to play. It will take the package that we want to use, then "combine" it to a single `/dist/main.js` file. So in our html file, we only need to do this to import all of our 10 package.
-`<script src="./dist/main.js"></script>`
+Doing so will allow me to use moment in my js file. But there's a problem when I have multiple js package that I want to import, it will be a nuisance if I import it one by one in my html file. This is where webpack comes in. If we have our own js (e.g., index.js) then we use the require statement, it will show that require isn't available. Webpack solves this problem by taking the require statement and putting the content of the required package into a single file. This means we can "import" stuff from our js file, and use it in our browser. The cool thing about this webpack thing is that it takes all the imports that we make, then only output one file, which means we only have to have a single `<script>` tag in our html to import all our package in browser. 
 
-After that we can use all the 10 packages normally in our js.
+Here's a simple code snippet to visualize what webpack does.
+
+I have an index.js file that has these content.
+```
+var moment = require('moment');
+
+console.log(moment);
+```
+
+But when I run those thing in the browser, it will spit out that it doesn't recognize require. This error occurs because we're using require in the browser. But we can process the index.js file with the help of webpack, which will output a single `main.js` file that will make the require statement browser compatible. I ran webpack by using `./node_modules/.bin/webpack index.js --mode=development`, which will take the index.js file and all the requires, then turn it into a browser compatible js file. In this case, it will be a `dist/main.js` file.
+
+This means I can do
+`<script src="./dist/mainjs"></script>` in my html file, which will have the console log that I written, and the moment variable. In summary, what webpack does is it "combines" packages and make it browser compatible, and this is the reason why front end development uses npm and node. At the end of the day, those requires when developing front end will be turned by webpack into browser compatible code.
+
+Super cool!
