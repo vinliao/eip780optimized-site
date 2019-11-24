@@ -1,6 +1,10 @@
+$color-black: hsl(0, 0%, 15%);
+$color-yellow: hsl(53, 100%, 50%);
+$color-light-grey: hsl(0, 0%, 80%);
+
 @mixin heading-text {
   padding: 25px;
-  background: hsl(0, 0%, 15%);
+  background: $color-black;
   color: white;
   text-align: center;
   width: 100%;
@@ -14,9 +18,10 @@
   width: 100%;
   font-size: 2rem;
   padding: 1rem 0;
-  background: hsl(0, 0%, 15%);
+  background: $color-black;
   color: white;
   text-decoration: none;
+  border: none;
   border-radius: 5px;
 }
 
@@ -25,10 +30,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-$color-black: hsl(0, 0%, 15%);
-$color-yellow: hsl(53, 100%, 50%);
-$color-light-grey: hsl(0, 0%, 80%);
 
 html,
 input[type="submit"] {
@@ -54,13 +55,6 @@ html {
   justify-content: center;
   height: 100vh;
   align-items: stretch;
-
-  &__form {
-    border: 1px $color-light-grey solid;
-    padding: 0 2rem 2rem 2rem;
-    margin-top: 2rem;
-    border-radius: 5px;
-  }
 
   &__title {
     @include heading-text;
