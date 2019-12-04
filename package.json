@@ -4,6 +4,7 @@
   "description": "A simple website to showcase the optimization of eip-780",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/webpack index.js --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass:compile": "node-sass main.scss style.css -w"
   },
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/vinliao/eip780optimized-site#readme",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.26",
     "node-sass": "^4.13.0",
     "web3": "^1.2.2"
   },
