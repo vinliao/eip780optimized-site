@@ -21,10 +21,10 @@ if (inputForm) {
     let bytes32Age = web3.utils.fromAscii(age).padEnd(66,'0');
     let bytes32Address = address.padEnd(42,'0');
     let bytes32Phone = web3.utils.fromAscii(phone).padEnd(66,'0');
-    let optimizedContract = new web3.eth.Contract(smartContract.optimized.ABI, smartContract.optimized.address);
-    let notOptimizedContract = new web3.eth.Contract(smartContract.notOptimized.ABI, smartContract.notOptimized.address);
-    let gasBefore = await notOptimizedContract.methods.attest(bytes32Name, bytes32Address, bytes32Age, bytes32Phone, 10).estimateGas();
-    let gasAfter = await optimizedContract.methods.attest(bytes32Name,bytes32Address , bytes32Age, bytes32Phone, 10).estimateGas();
+    let optimizedContract = new web3.eth.Contract(smartContract.optimized52.ABI, smartContract.optimized52.address);
+    let notOptimizedContract = new web3.eth.Contract(smartContract.notOptimized52.ABI, smartContract.notOptimized52.address);
+    let gasBefore = await notOptimizedContract.methods.attest(bytes32Name, bytes32Address, bytes32Age, 10, bytes32Phone, 10).estimateGas();
+    let gasAfter = await optimizedContract.methods.attest(bytes32Name,bytes32Address , bytes32Age, 10, bytes32Phone, 10).estimateGas();
     gasReduced = gasBefore - gasAfter;
     console.log("gas before ", gasBefore);
     console.log("gas after ", gasAfter);
