@@ -20,11 +20,16 @@
   },
   "homepage": "https://github.com/vinliao/eip780optimized-site#readme",
   "dependencies": {
+    "@babel/runtime": "^7.7.6",
     "@truffle/hdwallet-provider": "^1.0.26",
     "node-sass": "^4.13.0",
     "web3": "^1.2.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
