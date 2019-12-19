@@ -1,4 +1,9 @@
-const Web3 = require('web3')
-let web3 = new Web3("https://ropsten.infura.io/v3/9f38ed3efb544494802dedd0f862c687");
+const Web3 = require('web3');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const mnemonic = require('./../mnemonic');
+const rpc = require('./../rpc');
+const provider = new HDWalletProvider(mnemonic, rpc)
+// console.log(mnemonic);
+let web3 = new Web3(provider);
 
 module.exports = web3;
